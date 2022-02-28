@@ -2,7 +2,8 @@ import { Component } from "react";
 
 class FormInput extends Component {
     render() {
-        const { className, type, id, label, min, required } = this.props;
+        const { className, type, id, label, min, required, disabled } =
+            this.props;
         return (
             <div className={className}>
                 <input
@@ -12,6 +13,7 @@ class FormInput extends Component {
                     placeholder=""
                     min={min}
                     required={required}
+                    disabled={disabled}
                 />
                 <label htmlFor={id} className="form-label ms-2">
                     {label}

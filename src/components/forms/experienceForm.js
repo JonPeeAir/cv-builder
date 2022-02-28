@@ -7,12 +7,19 @@ class ExperienceForm extends Component {
     constructor(props) {
         super(props);
 
+        this.state = { ongoing: false };
+
         // "this" binder
         this.handleDelete = this.handleDelete.bind(this);
+        this.setOngoingTo = this.setOngoingTo.bind(this);
     }
 
     handleDelete() {
         this.props.onDelete(this.props.id);
+    }
+
+    setOngoingTo(boolean) {
+        this.setState({ ongoing: boolean });
     }
 
     render() {
@@ -55,13 +62,15 @@ class ExperienceForm extends Component {
                     type="date"
                     id={"job-date-to-" + this.props.id}
                     label="To"
-                    required
+                    required={!this.state.ongoing}
+                    disabled={this.state.ongoing}
                 />
 
                 <FormToggle
                     className="col-md-2 form-check form-switch align-self-center"
                     id={"job-ongoing-" + this.props.id}
                     label="Ongoing"
+                    onChange={this.setOngoingTo}
                 />
 
                 {this.props.showDelBtn && (
