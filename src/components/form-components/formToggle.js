@@ -13,13 +13,15 @@ class FormToggle extends Component {
     }
 
     render() {
-        const { className, id, label } = this.props;
+        const { className, id, name, value, label } = this.props;
         return (
             <div className={className}>
                 <input
                     type="checkbox"
                     className="btn-check"
                     id={id}
+                    name={name}
+                    value={value}
                     autoComplete="off"
                     onChange={this.handleChange}
                 />

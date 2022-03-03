@@ -28,7 +28,8 @@ class ExperienceForm extends Component {
                 <FormInput
                     className="col-12 form-floating"
                     type="text"
-                    id={"role-" + this.props.id}
+                    id={"job-" + this.props.id + "-role"}
+                    name={"job-" + this.props.id + "-role"}
                     label="Role/Position"
                     required
                 />
@@ -36,7 +37,8 @@ class ExperienceForm extends Component {
                 <FormInput
                     className="col-12 form-floating"
                     type="text"
-                    id={"company-" + this.props.id}
+                    id={"job-" + this.props.id + "-company"}
+                    name={"job-" + this.props.id + "-company"}
                     label="Company/Organization"
                     required
                 />
@@ -44,7 +46,8 @@ class ExperienceForm extends Component {
                 <FormInput
                     className="col-12 form-floating"
                     type="text"
-                    id={"job-location-" + this.props.id}
+                    id={"job-" + this.props.id + "-location"}
+                    name={"job-" + this.props.id + "-location"}
                     label="Location"
                     required
                 />
@@ -52,7 +55,8 @@ class ExperienceForm extends Component {
                 <FormInput
                     className="col-md-5 form-floating"
                     type="date"
-                    id={"job-date-from-" + this.props.id}
+                    id={"job-" + this.props.id + "-date-from"}
+                    name={"job-" + this.props.id + "-date-from"}
                     label="From"
                     required
                 />
@@ -60,7 +64,8 @@ class ExperienceForm extends Component {
                 <FormInput
                     className="col-md-5 form-floating"
                     type="date"
-                    id={"job-date-to-" + this.props.id}
+                    id={"job-" + this.props.id + "-date-to"}
+                    name={"job-" + this.props.id + "-date-to"}
                     label="To"
                     required={!this.state.ongoing}
                     disabled={this.state.ongoing}
@@ -68,7 +73,9 @@ class ExperienceForm extends Component {
 
                 <FormToggle
                     className="col-md-2 form-check form-switch align-self-center"
-                    id={"job-ongoing-" + this.props.id}
+                    id={"job-" + this.props.id + "-ongoing"}
+                    name={"job-" + this.props.id + "-date-to"}
+                    value="Ongoing"
                     label="Ongoing"
                     onChange={this.setOngoingTo}
                 />
@@ -76,6 +83,7 @@ class ExperienceForm extends Component {
                 {this.props.showDelBtn && (
                     <FormButton
                         className="d-grid col-6 mx-auto"
+                        buttonStyle="btn-outline-danger"
                         label="Delete Experience"
                         onClick={this.handleDelete}
                     />

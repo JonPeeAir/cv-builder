@@ -61,6 +61,8 @@ class ExperienceGroup extends Component {
                 {experienceForms}
                 <FormButton
                     className="d-grid col-6 mx-auto"
+                    buttonStyle="btn-outline-secondary"
+                    type="button"
                     label="Add Experience"
                     onClick={this.addExperience}
                 />

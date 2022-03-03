@@ -10,7 +10,8 @@ class PersonalDataForm extends Component {
                 <FormInput
                     className="col-md-6 col-xxl-4 form-floating"
                     type="text"
-                    id="first-name"
+                    id="pd-firstName"
+                    name="pd-firstName"
                     label="First Name"
                     required
                 />
@@ -18,7 +19,8 @@ class PersonalDataForm extends Component {
                 <FormInput
                     className="col-md-6 col-xxl-4 form-floating"
                     type="text"
-                    id="last-name"
+                    id="pd-lastName"
+                    name="pd-lastName"
                     label="Last Name"
                     required
                 />
@@ -26,14 +28,16 @@ class PersonalDataForm extends Component {
                 <FormInput
                     className="col-md-12 col-lg-6 col-xxl-4 form-floating"
                     type="text"
-                    id="title"
+                    id="pd-title"
+                    name="pd-title"
                     label="Title"
                 />
 
                 <FormInput
                     className="col-md-12 col-lg-6 col-xxl-6 form-floating"
                     type="tel"
-                    id="phone-number"
+                    id="pd-phoneNumber"
+                    name="pd-phoneNumber"
                     label="Phone Number"
                     required
                 />
@@ -41,7 +45,8 @@ class PersonalDataForm extends Component {
                 <FormInput
                     className="col-md-12 col-xxl-6 form-floating"
                     type="email"
-                    id="email"
+                    id="pd-email"
+                    name="pd-email"
                     label="Email"
                     required
                 />
@@ -50,7 +55,8 @@ class PersonalDataForm extends Component {
 
                 <FormTextArea
                     className="form-floating"
-                    id="description"
+                    id="pd-description"
+                    name="pd-description"
                     label="Description"
                     required
                 />
@@ -60,7 +66,8 @@ class PersonalDataForm extends Component {
                 <FormInput
                     className="mt-2 col-12 form-floating"
                     type="text"
-                    id="address-line-1"
+                    id="pd-address-line1"
+                    name="pd-address-line1"
                     label="Address Line 1"
                     required
                 />
@@ -68,14 +75,16 @@ class PersonalDataForm extends Component {
                 <FormInput
                     className="col-12 form-floating"
                     type="text"
-                    id="address-line-2"
+                    id="pd-address-line2"
+                    name="pd-address-line2"
                     label="Address Line 2"
                 />
 
                 <FormInput
                     className="col-md-4 col-lg-5 form-floating"
                     type="text"
-                    id="city"
+                    id="pd-city"
+                    name="pd-city"
                     label="City"
                     required
                 />
@@ -83,7 +92,8 @@ class PersonalDataForm extends Component {
                 <FormInput
                     className="col-md-4 col-lg-5 form-floating"
                     type="text"
-                    id="country"
+                    id="pd-country"
+                    name="pd-country"
                     label="Country"
                     required
                 />
@@ -91,7 +101,8 @@ class PersonalDataForm extends Component {
                 <FormInput
                     className="col-md-4 col-lg-2 form-floating"
                     type="number"
-                    id="zip-code"
+                    id="pd-zipCode"
+                    name="pd-zipCode"
                     label="Zip Code"
                     min={0}
                     required
@@ -102,14 +113,16 @@ class PersonalDataForm extends Component {
                 <FormInput
                     className="col-12 form-floating"
                     type="url"
-                    id="website"
+                    id="pd-website"
+                    name="pd-website"
                     label="Website"
                 />
 
                 <FormInput
                     className="col-12 form-floating"
                     type="url"
-                    id="linkedin"
+                    id="pd-linkedin"
+                    name="pd-linkedin"
                     label="Linkedin"
                 />
             </div>

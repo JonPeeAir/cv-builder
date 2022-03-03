@@ -28,7 +28,8 @@ class EducationForm extends Component {
                 <FormInput
                     className="col-12 form-floating"
                     type="text"
-                    id={"degree-" + this.props.id}
+                    id={"school-" + this.props.id + "-degree"}
+                    name={"school-" + this.props.id + "-degree"}
                     label="Degree/Certification"
                     required
                 />
@@ -36,7 +37,8 @@ class EducationForm extends Component {
                 <FormInput
                     className="col-12 form-floating"
                     type="text"
-                    id={"school-" + this.props.id}
+                    id={"school-" + this.props.id + "-name"}
+                    name={"school-" + this.props.id + "-name"}
                     label="University/School/Organization"
                     required
                 />
@@ -44,7 +46,8 @@ class EducationForm extends Component {
                 <FormInput
                     className="col-12 form-floating"
                     type="text"
-                    id={"school-location-" + this.props.id}
+                    id={"school-" + this.props.id + "-location"}
+                    name={"school-" + this.props.id + "-location"}
                     label="Location"
                     required
                 />
@@ -52,7 +55,8 @@ class EducationForm extends Component {
                 <FormInput
                     className="col-md-5 form-floating"
                     type="date"
-                    id={"school-date-from-" + this.props.id}
+                    id={"school-" + this.props.id + "-date-from"}
+                    name={"school-" + this.props.id + "-date-from"}
                     label="From"
                     required
                 />
@@ -60,7 +64,8 @@ class EducationForm extends Component {
                 <FormInput
                     className="col-md-5 form-floating"
                     type="date"
-                    id={"school-date-to-" + this.props.id}
+                    id={"school-" + this.props.id + "-date-to"}
+                    name={"school-" + this.props.id + "-date-to"}
                     label="To"
                     required={!this.state.ongoing}
                     disabled={this.state.ongoing}
@@ -68,7 +73,9 @@ class EducationForm extends Component {
 
                 <FormToggle
                     className="col-md-2 form-check form-switch align-self-center"
-                    id={"school-ongoing-" + this.props.id}
+                    id={"school-" + this.props.id + "-ongoing"}
+                    name={"school-" + this.props.id + "-date-to"}
+                    value="Ongoing"
                     label="Ongoing"
                     onChange={this.setOngoingTo}
                 />
@@ -76,6 +83,7 @@ class EducationForm extends Component {
                 {this.props.showDelBtn && (
                     <FormButton
                         className="d-grid col-6 mx-auto"
+                        buttonStyle="btn-outline-danger"
                         label="Delete Education"
                         onClick={this.handleDelete}
                     />

@@ -61,6 +61,8 @@ class EducationGroup extends Component {
                 {educationForms}
                 <FormButton
                     className="d-grid col-6 mx-auto"
+                    buttonStyle="btn-outline-secondary"
+                    type="button"
                     label="Add Education"
                     onClick={this.addEducation}
                 />

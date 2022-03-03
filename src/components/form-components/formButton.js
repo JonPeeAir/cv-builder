@@ -2,12 +2,12 @@ import { Component } from "react";
 
 class FormButton extends Component {
     render() {
-        const { className, label, onClick } = this.props;
+        const { className, buttonStyle, type, label, onClick } = this.props;
         return (
             <div className={className}>
                 <button
-                    className="btn btn-outline-secondary btn-lg fw-bold"
-                    type="button"
+                    className={"btn btn-lg fw-bold " + buttonStyle}
+                    type={type}
                     onClick={onClick}
                 >
                     {label}
